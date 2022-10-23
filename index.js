@@ -13,7 +13,7 @@ const result = excelToJson({
 		C: 'value',
 	}
 });
-
+const BASE_URL = 'http://localhost:8088'
 // const result = {
 //   Login: [
 //     { action: 'open', value: 'https://pms.dev.tabist.co.jp/' },
@@ -132,14 +132,14 @@ async function init() {
 
   const browser = await puppeteer.launch({
       headless: false,
-      executablePath: "/opt/homebrew/bin/chromium"
+      executablePath: "/usr/local/bin/chromium"
   });
 
   const page = await browser.newPage();
   await page.setViewport({ width: 1366, height: 768});
 
   const gotoPage = async (item) => {
-    await page.goto(item.value);
+    await page.goto(/^http/.test(item.value) ? item.value :  BASE_URL + item.value);
   }
 
   const waitForSelector = async (item) => {
