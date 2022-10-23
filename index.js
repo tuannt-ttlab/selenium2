@@ -14,113 +14,9 @@ const result = excelToJson({
 	}
 });
 const BASE_URL = 'http://localhost:8088'
-// const result = {
-//   Login: [
-//     { action: 'open', value: 'https://pms.dev.tabist.co.jp/' },
-//     {
-//       action: 'wait',
-//       element: '//*[@id="root"]/section/section/main/div/div/form/div[1]/div/div/div/div[2]/div[1]/div/input'
-//     },
-//     {
-//       action: 'type',
-//       element: '//*[@id="root"]/section/section/main/div/div/form/div[1]/div/div/div/div[2]/div[1]/div/input',
-//       value: 'tuannt@tokyotechlab.com'
-//     },
-//     {
-//       action: 'type',
-//       element: '//*[@id="root"]/section/section/main/div/div/form/div[2]/div/div/div/div[2]/div[1]/div/input',
-//       value: 'Center@1234'
-//     },
-//     {
-//       action: 'click',
-//       element: '//*[@id="root"]/section/section/main/div/div/form/div[4]/div/div/button'
-//     },
-//     {
-//       action: 'wait',
-//       element: '//*[@id="root"]/section/aside[1]/div/div[1]'
-//     },
-//     { action: 'delay', value: 2000 },
-//     { action: 'screenshot', value: 'dashboard' },
-//   ],
-//   // CreateRoomType: [
-//   //   { action: 'open', value: 'https://pms.dev.tabist.co.jp/room-type' },
-//   //   { action: 'delay', value: 2000 },
-//   //   {
-//   //     action: 'click',
-//   //     element: '//*[@id="staff-layout-content"]/section/main/div/div[1]/div[1]/div[2]/button'
-//   //   },
-//   //   { action: 'delay', value: 2000 },
-//   //   {
-//   //     action: 'type',
-//   //     element: '//*[@id="staff-layout-content"]/section/main/div/div[2]/div/div[2]/div/div/div[2]/div/div/div/form/div[1]/div/div/div/div[2]/div[1]/div/input',
-//   //     value: 'single1'
-//   //   },
-//   //   {
-//   //     action: 'type',
-//   //     element: '/html/body/div/section/section/section/main/div/div[2]/div/div[2]/div/div/div[2]/div/div/div/form/div[2]/div[1]/div/div/div[2]/div[1]/div/input',
-//   //     value: '1'
-//   //   },
-//   //   {
-//   //     action: 'type',
-//   //     element: '//*[@id="staff-layout-content"]/section/main/div/div[2]/div/div[2]/div/div/div[2]/div/div/div/form/div[2]/div[2]/div/div/div[2]/div[1]/div/input',
-//   //     value: '1'
-//   //   },
-//   //   {
-//   //     action: 'click',
-//   //     element: '//*[@id="staff-layout-content"]/section/main/div/div[2]/div/div[2]/div/div/div[2]/div/div/div/form/div[4]/div/div/div[2]/div/div[2]/div/div/span'
-//   //   },
-//   //   {
-//   //     action: 'click',
-//   //     element: '//*[@id="staff-layout-content"]/section/main/div/div[2]/div/div[2]/div/div/div[3]/div/div/div[2]/button'
-//   //   },
-//   //   { action: 'delay', value: 3000 },
-//   //   { action: 'screenshot', value: 'create_room_type' }
-//   // ],
-//   CreateRoom: [
-//     { action: 'open', value: 'https://pms.dev.tabist.co.jp/room/create-individual' },
-//     { action: 'delay', value: 2000 },
-//     {
-//       action: 'click',
-//       element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[1]/div[2]/div/div/div[2]/div[1]/div/div/div',
-//     },
-//     {
-//       action: 'type',
-//       element: '/html/body/div[1]/section/section/div/main/div/div/div[1]/div/form/div[1]/div[2]/div/div/div[2]/div[1]/div/div/div/span[1]/input',
-//       value: 'single1'
-//     },
-//     {
-//       action: 'click',
-//       element: '/html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]',
-//     },
-//     {
-//       action: 'type',
-//       element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[1]/div[1]/div/div/div[2]/div[1]/div/input',
-//       value: '2'
-//     },
-//     {
-//       action: 'type',
-//       element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[1]/div[3]/div/div/div[2]/div[1]/div/input',
-//       value: '10'
-//     },
-//     {
-//       action: 'click',
-//       element: '//*[@id="staff-layout-content"]/div/footer/div/div/div[2]/button',
-//     },
-//     { action: 'delay', value: 1000 },
-//     {
-//       action: 'click',
-//       element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[2]/div/div/div/div/div/button',
-//     },
-//     {
-//       action: 'click',
-//       element: '//*[@id="staff-layout-content"]/div/footer/div/div/div[2]/button',
-//     },
-//     { action: 'delay', value: 2000 },
-//     { action: 'screenshot', value: 'create_room' }
-//   ]
-// }
 
-// console.log(result)
+console.log(result)
+
 
 function delay(item) {
   return new Promise(function(resolve) {
@@ -139,7 +35,21 @@ async function init() {
   await page.setViewport({ width: 1366, height: 768});
 
   const gotoPage = async (item) => {
-    await page.goto(/^http/.test(item.value) ? item.value :  BASE_URL + item.value);
+    await page.goto(/^http/.test(item.value) ? item.value :  (item.value ? BASE_URL + item.value : BASE_URL));
+  }
+
+  const reload = (item) => {
+    return page.reload();
+  }
+
+  const clickPosistion = async (item) => {
+    const elements = await page.$x(item.element)
+    if(!elements.length) return
+    const rect  = await page.evaluate(el => {
+      const {x, y} = el.getBoundingClientRect();
+      return {x, y};
+    }, elements[0]);
+    await page.mouse.click(rect.x + 5, rect.y + 5);
   }
 
   const waitForSelector = async (item) => {
@@ -176,9 +86,11 @@ async function init() {
     open: gotoPage,
     wait: waitForSelector,
     click: clickElement,
+    clickPoint: clickPosistion,
     type: typeElement,
     close: closeBrowser,
     delay: delay,
+    reload: reload,
     screenshot: screenshot,
   }
 
