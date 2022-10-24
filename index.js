@@ -15,7 +15,8 @@ async function init() {
 
   const browser = await puppeteer.launch({
       headless: false,
-      executablePath: EXECUTABLE_PATH
+      executablePath: EXECUTABLE_PATH,
+      // slowMo: 50,
   });
 
   const page = await browser.newPage();

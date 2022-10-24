@@ -1,4 +1,3 @@
-const createBooking = require('./create-tmp-booking');
 
 const openForm = [
   {
@@ -13,8 +12,8 @@ const openForm = [
     action: 'delay',
     value: 2000,
   },
+  { action: 'screenshot', value: 'create-room-booking-from-list' }
 ]
 
-const step = openForm.concat(createBooking);
 
-module.exports = step;
+module.exports = openForm;
