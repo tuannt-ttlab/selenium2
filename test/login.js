@@ -1,3 +1,5 @@
+var login = require('../form/login')
+
 module.exports = [
   { action: 'open' },
   {
@@ -7,12 +9,12 @@ module.exports = [
   {
     action: 'type',
     element: '//*[@id="root"]/section/section/main/div/div/form/div[1]/div/div/div/div[2]/div[1]/div/input',
-    value: 'tuannt@tokyotechlab.com'
+    value: login.email
   },
   {
     action: 'type',
     element: '//*[@id="root"]/section/section/main/div/div/form/div[2]/div/div/div/div[2]/div[1]/div/input',
-    value: 'Center@1234'
+    value: login.password
   },
   {
     action: 'click',

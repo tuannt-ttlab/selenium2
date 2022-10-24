@@ -47,7 +47,10 @@ async function init() {
 
   const clickElement = async (item) => {
     if(item.value === 'selector') {
-      return page.click(item.element)
+      const elements = await page.$(item.element)
+      console.log('elements', elements.length)
+      if(!elements.length) return
+      await elements[0].click()
     }
     const elements = await page.$x(item.element)
     if(!elements.length) return

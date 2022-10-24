@@ -7,6 +7,7 @@ module.exports = [
     action: 'click',
     element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[1]/div[2]/div/div/div[2]/div[1]/div/div/div'
   },
+  // 部屋タイプ
   {
     action: 'type',
     element: '/html/body/div[1]/section/section/div/main/div/div/div[1]/div/form/div[1]/div[2]/div/div/div[2]/div[1]/div/div/div/span[1]/input',
@@ -18,18 +19,21 @@ module.exports = [
     element: '/html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]',
     comment: 'select first item'
   },
+  // 数量
   {
     action: 'type',
     element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[1]/div[1]/div/div/div[2]/div[1]/div/input',
     value: room.quantity,
     field: '数量'
   },
+  // 開始番号
   {
     action: 'type',
     element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[1]/div[3]/div/div/div[2]/div[1]/div/input',
     value: room.initialRoomName,
     field: '開始番号'
   },
+  // 適応する
   {
     action: 'click',
     element: '//*[@id="staff-layout-content"]/div/footer/div/div/div[2]/button'
@@ -40,6 +44,7 @@ module.exports = [
     element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[2]/div/div/div/div/div/button',
     comment: 'click 適応する'
   },
+  // submit
   {
     action: 'click',
     element: '//*[@id="staff-layout-content"]/div/footer/div/div/div[2]/button',
