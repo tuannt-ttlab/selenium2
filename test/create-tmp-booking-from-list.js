@@ -7,7 +7,7 @@ const openForm = [
   },
   {
     action: 'click',
-    element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/button'
+    element: '//*[@id="btn-add-booking"]'
   },
   {
     action: 'delay',

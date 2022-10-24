@@ -1,7 +1,7 @@
 var roomType = require('./room-type')
 
 module.exports = {
-  quantity: 2,
+  quantity: 1,
   roomType: roomType.name,
-  initialRoomName: 'room-1',
+  initialRoomName: 'room-type-r3',
 }

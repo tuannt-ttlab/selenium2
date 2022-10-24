@@ -10,7 +10,7 @@ module.exports = [
   // 部屋タイプ
   {
     action: 'type',
-    element: '/html/body/div[1]/section/section/div/main/div/div/div[1]/div/form/div[1]/div[2]/div/div/div[2]/div[1]/div/div/div/span[1]/input',
+    element: '//*[@id="form-individual-rooms-roomTypeId"]',
     value: room.roomType,
     filed: '部屋タイプ'
   },
@@ -22,32 +22,32 @@ module.exports = [
   // 数量
   {
     action: 'type',
-    element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[1]/div[1]/div/div/div[2]/div[1]/div/input',
+    element: '//*[@id="form-individual-rooms-quantity"]',
     value: room.quantity,
     field: '数量'
   },
   // 開始番号
   {
     action: 'type',
-    element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[1]/div[3]/div/div/div[2]/div[1]/div/input',
+    element: '//*[@id="form-individual-rooms-initialRoomName"]',
     value: room.initialRoomName,
     field: '開始番号'
   },
   // 適応する
   {
     action: 'click',
-    element: '//*[@id="staff-layout-content"]/div/footer/div/div/div[2]/button'
+    element: '//*[@id="form-individual-submit"]'
   },
   { action: 'delay', value: 1000 },
   {
     action: 'click',
-    element: '//*[@id="staff-layout-content"]/div/main/div/div/div[1]/div/form/div[2]/div/div/div/div/div/button',
+    element: '//*[@id="form-individual-rooms-room-generate-button"]',
     comment: 'click 適応する'
   },
   // submit
   {
     action: 'click',
-    element: '//*[@id="staff-layout-content"]/div/footer/div/div/div[2]/button',
+    element: '//*[@id="form-individual-submit"]',
     comment: 'click 保存 (submit)'
   },
   { action: 'delay', value: 3000 },

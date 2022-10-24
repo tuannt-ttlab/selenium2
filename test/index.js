@@ -8,9 +8,9 @@ const closeBrowser = [ { action: 'close' } ]
 
 module.exports = {
   ['1login']: login,
-  // ['2createRoomType']: createRoomType,
-  // ['3createRoom']: createRoom,
-  // ['4createPlan']: createPlan,
+  ['2createRoomType']: createRoomType,
+  ['3createRoom']: createRoom,
+  ['4createPlan']: createPlan,
   ['5createTmpBookingFromList']: createTmpBookingFromList,
   // ['9999closeBrowser']: closeBrowser,
 }

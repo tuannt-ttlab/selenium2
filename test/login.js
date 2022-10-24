@@ -4,25 +4,26 @@ module.exports = [
   { action: 'open' },
   {
     action: 'wait',
-    element: '//*[@id="root"]/section/section/main/div/div/form/div[1]/div/div/div/div[2]/div[1]/div/input'
+    element: '//*[@id="login-email"]'
   },
   {
     action: 'type',
-    element: '//*[@id="root"]/section/section/main/div/div/form/div[1]/div/div/div/div[2]/div[1]/div/input',
+    element: '//*[@id="login-email"]',
     value: login.email
   },
   {
     action: 'type',
-    element: '//*[@id="root"]/section/section/main/div/div/form/div[2]/div/div/div/div[2]/div[1]/div/input',
+    element: '//*[@id="login-password"]',
     value: login.password
   },
   {
     action: 'click',
-    element: '//*[@id="root"]/section/section/main/div/div/form/div[4]/div/div/button'
+    element: '//*[@id="login-submit"]'
   },
   {
     action: 'wait',
-    element: '//*[@id="root"]/section/aside[1]/div/div[1]'
+    element: '//*[@id="root"]/section/aside[1]/div/div[1]',
+    comment: 'logo'
   },
   { action: 'delay', value: 2000 },
   { action: 'screenshot', value: 'dashboard' }

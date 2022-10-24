@@ -11,7 +11,7 @@ module.exports = [
   // 表示名
   {
     action: 'type',
-    element: '//*[@id="staff-layout-content"]/section/main/div/div[2]/div/div[2]/div/div/div[2]/div/div/div/form/div[1]/div/div/div/div[2]/div[1]/div/input',
+    element: '//*[@id="form-room-type-name"]',
     value: roomType.name,
     comment: 'enter room type name',
     field: '表示名'
@@ -19,21 +19,21 @@ module.exports = [
   // 略称
   {
     action: 'type',
-    element: '//*[@id="staff-layout-content"]/section/main/div/div[2]/div/div[2]/div/div/div[2]/div/div/div/form/div[2]/div[1]/div/div/div[2]/div[1]/div/input',
+    element: '//*[@id="form-room-type-abbreviation"]',
     value: roomType.abbreviation,
     field: '略称'
   },
   // 標準 定員
   {
     action: 'type',
-    element: '//*[@id="staff-layout-content"]/section/main/div/div[2]/div/div[2]/div/div/div[2]/div/div/div/form/div[2]/div[2]/div/div/div[2]/div[1]/div/input',
+    element: '//*[@id="form-room-type-standardCapacity"]',
     value: roomType.standardCapacity,
     field: '標準 定員'
   },
   // 販売チャネル
   {
     action: 'click',
-    element: '//*[@id="staff-layout-content"]/section/main/div/div[2]/div/div[2]/div/div/div[2]/div/div/div/form/div[4]/div/div/div[2]/div/div[2]/div/div/span',
+    element: '//*[@id="form-room-type-channels.0.delete"]',
     comment: 'remove 販売チャネル'
   },
   // submit
