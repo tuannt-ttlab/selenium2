@@ -22,3 +22,5 @@ brew install --cask chromium & which chromium
 ```
 node index.js
 ```
+
+https://fakerjs.dev/api/
