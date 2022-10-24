@@ -30,7 +30,7 @@ module.exports = [
   },
   {
     action: 'click',
-    element: '/html/body/div[8]/div/div/div/div[2]/div[1]/div/div/div[1]'
+    element: '/html/body/div[15]/div/div/div/div[2]/div[1]/div/div/div'
   },
   // 部屋名
   // 大人

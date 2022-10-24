@@ -66,7 +66,7 @@ function getPath(col, row = 0) {
   return `//*[@id="form-plan-planRoomTypes.${row}.planRoomTypePricings.${col}.price"]`
 }
 
-for (let index = 2; index < 10; index++) {
+for (let index = 0; index <= 7; index++) {
   const path = getPath(index)
   step2.push({
     action: 'type',

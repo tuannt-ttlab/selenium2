@@ -1,7 +1,8 @@
 var roomType = require('./room-type')
+var util = require('../util')
 
 module.exports = {
   quantity: 1,
   roomType: roomType.name,
-  initialRoomName: 'room-type-r3',
+  initialRoomName: util.makeid(5),
 }
