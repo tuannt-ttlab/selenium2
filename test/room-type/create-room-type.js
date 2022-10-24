@@ -1,4 +1,4 @@
-var roomType = require('../form/room-type')
+var roomType = require('../../form/room-type')
 
 module.exports = [
   { action: 'open', value: '/room-type' },

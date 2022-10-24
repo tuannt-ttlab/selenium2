@@ -1,4 +1,4 @@
-var room = require('../form/room')
+var room = require('../../form/room')
 
 module.exports = [
   { action: 'open', value: '/room/create-individual' },

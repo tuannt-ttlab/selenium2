@@ -1,10 +1,10 @@
 var login =  require("./login");
-var createRoomType = require("./create-room-type");
-var createRoom = require("./create-room");
-var createPlan = require("./create-plan");
-var createTmpBookingFromList = require("./create-tmp-booking-from-list");
-var createTmpBookingFromSchedule = require("./create-tmp-booking-from-schedule");
-var createBooking = require("./create-booking");
+var createRoomType = require("./room-type/create-room-type");
+var createRoom = require("./room/create-room");
+var createPlan = require("./plan/create-plan");
+var createTmpBookingFromList = require("./room-booking/create-tmp-booking-from-list");
+var createTmpBookingFromSchedule = require("./room-booking/create-tmp-booking-from-schedule");
+var createBooking = require("./room-booking/create-booking");
 const closeBrowser = [ { action: 'close' } ]
 
 module.exports = {

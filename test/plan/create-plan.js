@@ -1,4 +1,4 @@
-var plan = require('../form/plan')
+var plan = require('../../form/plan')
 
 const step1 = [
   { action: 'open', value: '/plan/create-plan' },

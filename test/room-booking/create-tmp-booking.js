@@ -1,5 +1,5 @@
-var plan = require('../form/plan');
-var room = require('../form/room');
+var plan = require('../../form/plan');
+var room = require('../../form/room');
 
 module.exports = [
   // プラン

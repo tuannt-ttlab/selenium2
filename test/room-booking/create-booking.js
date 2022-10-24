@@ -1,4 +1,4 @@
-var bookingForm = require('../form/create-booking');
+var bookingForm = require('../../form/create-booking');
 
 const gotoPage = [
   {
