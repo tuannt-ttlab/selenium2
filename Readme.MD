@@ -20,7 +20,7 @@ brew install --cask chromium & which chromium
 ## run script
 
 ```
-node index.js
+yarn start
 ```
 
 https://fakerjs.dev/api/
