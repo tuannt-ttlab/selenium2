@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "convert-excel-to-json": "^1.7.0",
+    "dotenv": "^16.0.3",
     "lodash": "^4.17.21",
     "puppeteer": "^19.0.0",
     "puppeteer-core": "^19.0.0",

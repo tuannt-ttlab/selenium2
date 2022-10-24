@@ -1,7 +1,8 @@
 var puppeteer = require('puppeteer');
 var result = require('./test/index');
-const BASE_URL = 'http://localhost:8088'
-const executablePath = "/opt/homebrew/bin/chromium"
+require('dotenv').config();
+const BASE_URL = process.env.BASE_URL
+const EXECUTABLE_PATH = process.env.EXECUTABLE_PATH
 // test data
 
 function delay(item) {
@@ -14,7 +15,7 @@ async function init() {
 
   const browser = await puppeteer.launch({
       headless: false,
-      executablePath: executablePath
+      executablePath: EXECUTABLE_PATH
   });
 
   const page = await browser.newPage();
