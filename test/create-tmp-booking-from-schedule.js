@@ -11,7 +11,7 @@ const openForm = [
   },
   {
     action: 'delay',
-    value: 3000,
+    value: 2000,
   },
 ]
 
