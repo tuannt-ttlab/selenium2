@@ -16,7 +16,7 @@ async function init() {
   const browser = await puppeteer.launch({
       headless: false,
       executablePath: EXECUTABLE_PATH,
-      // slowMo: 50,
+      slowMo: 10,
   });
 
   const page = await browser.newPage();
@@ -93,6 +93,7 @@ async function init() {
         await options[item.action](item);
       }
     }
+    console.log('done', key)
   }
 }
 

@@ -34,20 +34,20 @@ const step2 = [
   { action: 'delay', value: 1000 },
   {
     action: 'click',
-    element: '/html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]',
+    element: `//*[@id="roomTypeIds-${plan.room}"]`,
     comment: 'select first item'
   },
   { action: 'delay', value: 1000 },
   // 料金カレンダー
   {
-    action: 'click',
+    action: 'type',
     element: '//*[@id="form-plan-planRankId"]',
-    field: '料金カレンダー'
+    value: plan.rank
   },
   { action: 'delay', value: 1000 },
   {
     action: 'click',
-    element: '/html/body/div[3]/div/div/div/div[2]/div[1]/div/div/div',
+    element: `//*[@id="planRankId-${plan.rank}"]`,
     comment: 'select first item'
   }
 ]

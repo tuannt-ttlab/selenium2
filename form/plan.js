@@ -5,4 +5,5 @@ module.exports = {
   name: 'plan-' + util.makeid(5),
   desc: 'plan desc',
   room: room.roomType,
+  rank: 'Plan Rank 1'
 }

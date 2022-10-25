@@ -14,9 +14,10 @@ module.exports = [
     value: room.roomType,
     filed: '部屋タイプ'
   },
+  { action: 'delay', value: 1000 },
   {
     action: 'click',
-    element: '/html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]',
+    element: `//*[@id="roomTypeId-${room.roomType}"]`,
     comment: 'select first item'
   },
   // 数量

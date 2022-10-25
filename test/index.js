@@ -9,11 +9,11 @@ const closeBrowser = [ { action: 'close' } ]
 
 module.exports = {
   ['1login']: login,
-  // ['2createRoomType']: createRoomType,
-  // ['3createRoom']: createRoom,
-  // ['4createPlan']: createPlan,
-  // ['5createTmpBookingFromList']: createTmpBookingFromList,
-  // ['6createTmpBookingFromSchedule']: createTmpBookingFromSchedule,
+  ['2createRoomType']: createRoomType,
+  ['3createRoom']: createRoom,
+  ['4createPlan']: createPlan,
+  ['5createTmpBookingFromList']: createTmpBookingFromList,
+  ['6createTmpBookingFromSchedule']: createTmpBookingFromSchedule,
   ['7createBooking']: createBooking,
   // ['9999closeBrowser']: closeBrowser,
 }

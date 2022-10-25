@@ -15,7 +15,7 @@ module.exports = [
   },
   {
     action: 'click',
-    element: `//*[@id="0-${plan.name}"]`
+    element: `//*[@id="plan-${plan.name}"]`
   },
   // 部屋タイプ
   {
@@ -30,7 +30,7 @@ module.exports = [
   },
   {
     action: 'click',
-    element: `//*[@id="0-${room.roomType}"]`
+    element: `//*[@id="roomTypeId-${room.roomType}"]`
   },
   // 部屋名
   // 大人
