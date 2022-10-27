@@ -1,4 +1,4 @@
-var sale = require('../form/sale')
+var sale = require('../../form/sale')
 
 module.exports = [
   {
@@ -7,11 +7,11 @@ module.exports = [
   },
   {
     action: 'await',
-    element: '//*[@id="btn-sale-group-form"]',
+    element: '//*[@id="btn-create-sale-group"]',
   },
   {
     action: 'click',
-    element: '//*[@id="btn-sale-group-form"]',
+    element: '//*[@id="btn-create-sale-group"]',
   },
   {
     action: 'delay',

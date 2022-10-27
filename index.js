@@ -85,15 +85,15 @@ async function init() {
     screenshot: screenshot,
   }
 
-  for (const key in result) {
-    const list = result[key];
-    for (let index = 0; index < list.length; index++) {
-      const item = list[index];
+  for (let i = 0; i < result.length; i++) {
+    const testcase = result[i];
+    for (let index = 0; index < testcase.data.length; index++) {
+      const item = testcase.data[index];
       if(options[item.action]) {
         await options[item.action](item);
       }
     }
-    console.log('done', key)
+    console.log('done', testcase.name)
   }
 }
 

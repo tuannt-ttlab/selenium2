@@ -1,10 +1,16 @@
 var util = require('../util')
 
 const saleGroup = {
-  name: 'sale-group-' + util.makeid(5),
+  name: 'sgroup-' + util.makeid(5),
 }
 
-const saleItem = {}
+const saleItem = {
+  quantity: 1,
+  saleGroupId: saleGroup.name,
+  saleItemPrice: 1000,
+  tax: 'tax1',
+  name: 'sale-item-' + util.makeid(5),
+}
 
 module.exports = {
   saleGroup,
