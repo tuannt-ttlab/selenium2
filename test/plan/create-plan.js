@@ -16,6 +16,39 @@ const step1 = [
     value: plan.desc,
     field: 'プランの詳細'
   },
+  // add price
+  {
+    action: 'click',
+    element: '//*[@id="form-plan-btn-add"]',
+    comment: 'next'
+  },
+  // 項目
+  {
+    action: 'type',
+    element: '//*[@id="form-plan-planSaleItems.0.saleItemId"]',
+    value: plan.saleItem.name
+  },
+  {
+    action: 'delay',
+    value: 1000
+  },
+  {
+    action: 'click',
+    element: `//*[@id="planSaleItems.0.saleItemId-${plan.saleItem.name}"]`,
+    comment: 'select first item'
+  },
+  // 単価
+  {
+    action: 'type',
+    element: '//*[@id="form-plan-planSaleItems.0.price"]',
+    value: plan.saleItem.price
+  },
+  // 数量
+  {
+    action: 'type',
+    element: '//*[@id="form-plan-planSaleItems.0.quantity"]',
+    value: plan.saleItem.quantity
+  },
   {
     action: 'click',
     element: '//*[@id="form-plan-btn-next"]',
