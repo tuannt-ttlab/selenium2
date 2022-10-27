@@ -68,4 +68,8 @@ module.exports = [
     action: 'click',
     element: '//*[@id="sale-item-form-btn-submit"]',
   },
+  {
+    action: 'delay',
+    value: 2000
+  },
 ]
