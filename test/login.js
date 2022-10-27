@@ -1,7 +1,7 @@
 var login = require('../form/login')
 
 module.exports = [
-  { action: 'open' },
+  { action: 'open', value: '/login' },
   {
     action: 'wait',
     element: '//*[@id="login-email"]'
