@@ -12,7 +12,6 @@ const openForm = [
     action: 'delay',
     value: 2000,
   },
-  { action: 'screenshot', value: 'create-room-booking-from-list' }
 ]
 
 

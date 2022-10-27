@@ -52,5 +52,4 @@ module.exports = [
     comment: 'click 保存 (submit)'
   },
   { action: 'delay', value: 3000 },
-  { action: 'screenshot', value: 'create_room' }
 ]

@@ -60,7 +60,6 @@ const submit = [
     comment: 'submit'
   },
   { action: 'delay', value: 2000 },
-  { action: 'screenshot', value: 'create_plan' }
 ]
 function getPath(col, row = 0) {
   return `//*[@id="form-plan-planRoomTypes.${row}.planRoomTypePricings.${col}.price"]`

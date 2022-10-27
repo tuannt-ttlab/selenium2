@@ -26,5 +26,4 @@ module.exports = [
     comment: 'logo'
   },
   { action: 'delay', value: 2000 },
-  { action: 'screenshot', value: 'dashboard' }
 ]

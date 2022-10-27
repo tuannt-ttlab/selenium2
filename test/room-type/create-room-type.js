@@ -43,5 +43,4 @@ module.exports = [
     comment: 'submit'
   },
   { action: 'delay', value: 3000 },
-  { action: 'screenshot', value: 'create_room_type' }
 ]
