@@ -7,6 +7,7 @@ var createTmpBookingFromSchedule = require("./room-booking/create-tmp-booking-fr
 var createBooking = require("./room-booking/create-booking");
 var createSaleGroup = require("./sale/create-sale-group");
 var createSaleItem = require("./sale/create-sale-item");
+var createRankCalendar = require("./rank/create-rank");
 const closeBrowser = [ { action: 'close' } ]
 
 module.exports = [
@@ -29,6 +30,10 @@ module.exports = [
   {
     data: createSaleItem,
     name: 'createSaleItem'
+  },
+  {
+    data: createRankCalendar,
+    name: 'createRankCalendar'
   },
   {
     data: createPlan,
