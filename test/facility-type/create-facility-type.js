@@ -35,11 +35,27 @@ module.exports = [
     element: '//*[@id="facility-type-form-businessTimes"]/div/div[1]/input',
     value: facilityType.startTime
   },
+  {
+    action: 'delay',
+    value: 1000,
+  },
+  {
+    action: 'click',
+    element: '/html/body/div[2]/div/div/div/div[2]/div[2]/ul/li/button',
+  },
   // 営業時間
   {
     action: 'type',
     element: '//*[@id="facility-type-form-businessTimes"]/div/div[3]/input',
     value: facilityType.endTime
+  },
+  {
+    action: 'delay',
+    value: 1000,
+  },
+  {
+    action: 'click',
+    element: '/html/body/div[2]/div/div/div/div[2]/div[2]/ul/li/button',
   },
   // 定額料金
   {
