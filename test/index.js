@@ -1,4 +1,4 @@
-var login =  require("./login");
+var login = require("./login");
 var createRoomType = require("./room-type/create-room-type");
 var createRoom = require("./room/create-room");
 var createPlan = require("./plan/create-plan");
@@ -8,47 +8,57 @@ var createBooking = require("./room-booking/create-booking");
 var createSaleGroup = require("./sale/create-sale-group");
 var createSaleItem = require("./sale/create-sale-item");
 var createRankCalendar = require("./rank/create-rank");
-const closeBrowser = [ { action: 'close' } ]
+const closeBrowser = [
+  {
+    action: "delay",
+    value: 2000,
+  },
+  { action: "close" },
+];
 
 module.exports = [
   {
     data: login,
-    name: 'login'
+    name: "login",
   },
   {
     data: createRoomType,
-    name: 'createRoomType'
+    name: "createRoomType",
   },
   {
     data: createRoom,
-    name: 'createRoom'
+    name: "createRoom",
   },
   {
     data: createSaleGroup,
-    name: 'createSaleGroup'
+    name: "createSaleGroup",
   },
   {
     data: createSaleItem,
-    name: 'createSaleItem'
+    name: "createSaleItem",
   },
   {
     data: createRankCalendar,
-    name: 'createRankCalendar'
+    name: "createRankCalendar",
   },
   {
     data: createPlan,
-    name: 'createPlan'
+    name: "createPlan",
   },
   {
     data: createTmpBookingFromList,
-    name: 'createTmpBookingFromList'
+    name: "createTmpBookingFromList",
   },
   {
     data: createTmpBookingFromSchedule,
-    name: 'createTmpBookingFromSchedule'
+    name: "createTmpBookingFromSchedule",
   },
   {
     data: createBooking,
-    name: 'createBooking'
+    name: "createBooking",
   },
-]
+  {
+    data: closeBrowser,
+    name: "closeBrowser",
+  },
+];

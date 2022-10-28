@@ -14,7 +14,7 @@ function delay(item) {
 async function init() {
 
   const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       executablePath: EXECUTABLE_PATH,
       slowMo: 10,
   });
