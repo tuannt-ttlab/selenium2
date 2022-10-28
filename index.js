@@ -4,6 +4,16 @@ require('dotenv').config();
 const BASE_URL = process.env.BASE_URL
 const EXECUTABLE_PATH = process.env.EXECUTABLE_PATH
 // test data
+var args = process.argv.slice(2);
+const option = {}
+
+if(args.length) {
+  args.forEach(item => {
+    const [key, value] = item.split('=')
+    option[key] = value
+  })
+}
+console.log('option', option)
 
 function delay(item) {
   return new Promise(function(resolve) {
@@ -14,7 +24,7 @@ function delay(item) {
 async function init() {
 
   const browser = await puppeteer.launch({
-      headless: true,
+      headless: option['headless'] == 'true' ? true : false,
       executablePath: EXECUTABLE_PATH,
       slowMo: 10,
   });
@@ -83,6 +93,11 @@ async function init() {
     delay: delay,
     reload: reload,
     screenshot: screenshot,
+  }
+
+  if(option['cases']) {
+    const cases = option['cases'].split(',')
+    result = result.filter(item => item.name === 'login' || item.name === 'closeBrowser' || cases.includes(item.name))
   }
 
   for (let i = 0; i < result.length; i++) {

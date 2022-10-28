@@ -21,6 +21,10 @@ brew install --cask chromium & which chromium
 
 ```
 yarn start
+
+yarn start headless=true
+
+yarn start headless=true cases=createRoomType
 ```
 
 https://fakerjs.dev/api/

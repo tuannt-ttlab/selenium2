@@ -8,6 +8,11 @@ var createBooking = require("./room-booking/create-booking");
 var createSaleGroup = require("./sale/create-sale-group");
 var createSaleItem = require("./sale/create-sale-item");
 var createRankCalendar = require("./rank/create-rank");
+var createGuestClass = require("./guest/create-guest-class");
+var createGuest = require("./guest/create-guest");
+var createFacilityType = require("./facility-type/create-facility-type");
+var createFacility = require("./facility/create-facility");
+
 const closeBrowser = [
   {
     action: "delay",
@@ -20,6 +25,22 @@ module.exports = [
   {
     data: login,
     name: "login",
+  },
+  {
+    data: createGuestClass,
+    name: "createGuestClass",
+  },
+  {
+    data: createGuest,
+    name: "createGuest",
+  },
+  {
+    data: createFacilityType,
+    name: "createFacilityType",
+  },
+  {
+    data: createFacility,
+    name: "createFacility",
   },
   {
     data: createRoomType,
