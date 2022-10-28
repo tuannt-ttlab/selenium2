@@ -22,9 +22,12 @@ brew install --cask chromium & which chromium
 ```
 yarn start
 
-yarn start headless=true
+yarn start headless=true close=false
 
 yarn start headless=true cases=createRoomType
+
+yarn start headless=false cases=createTmpBookingFromSchedule,createRoom,createRoomType,createSaleGroup,createSaleItem,createRankCalendar,createPlan
+
 ```
 
 https://fakerjs.dev/api/

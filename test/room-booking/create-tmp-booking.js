@@ -33,6 +33,19 @@ module.exports = [
     element: `//*[@id="roomTypeId-${room.roomType}"]`
   },
   // 部屋名
+  {
+    action: 'type',
+    element: '//*[@id="create-booking-form-roomId"]',
+    value: room.initialRoomName,
+  },
+  {
+    action: 'delay',
+    value: 1000,
+  },
+  {
+    action: 'click',
+    element: `//*[@id="roomId-${room.initialRoomName}"]`
+  },
   // 大人
   {
     action: 'type',
