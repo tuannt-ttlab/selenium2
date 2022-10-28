@@ -97,7 +97,13 @@ async function init() {
 
   if(option['cases']) {
     const cases = option['cases'].split(',')
-    result = result.filter(item => item.name === 'login' || item.name === 'closeBrowser' || cases.includes(item.name))
+    result = result.filter(item => {
+      const isLogin = item.name === 'login'
+      const inCases = cases.includes(item.name)
+      const isClose = option['close'] === 'false' ? false : true
+      const needClose = item.name === 'closeBrowser'
+      return isLogin || inCases || (needClose && isClose)
+    })
   }
 
   for (let i = 0; i < result.length; i++) {

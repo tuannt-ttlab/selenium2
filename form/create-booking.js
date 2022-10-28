@@ -8,6 +8,9 @@ module.exports = {
     yomigana: firstName,
     fullName: lastName,
     phone: faker.phone.number('##########'),
-    email: faker.internet.email(firstName, lastName)
-  }
+    email: faker.internet.email(firstName, lastName),
+    birthday: '2000-01-01',
+    gender: '男性'
+  },
+  marketingChannelId: '電話'
 }

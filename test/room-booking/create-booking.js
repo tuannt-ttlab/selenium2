@@ -54,7 +54,7 @@ const representativeGuest = [
   {
     action: 'type',
     element: '//*[@id="createBookingFormPage-form-representativeGuest.gender"]',
-    value: '男性'
+    value: bookingForm.representativeGuest.gender
   },
   {
     action: 'delay',
@@ -62,16 +62,46 @@ const representativeGuest = [
   },
   {
     action: 'click',
-    element: '//*[@id="representativeGuest.gender-0-男性"]'
+    element: `//*[@id="representativeGuest.gender-${bookingForm.representativeGuest.gender}"]`
+  },
+  // 販売チャネル
+  {
+    action: 'type',
+    element: '//*[@id="createBookingFormPage-form-marketingChannelId"]',
+    value: bookingForm.marketingChannelId
+  },
+  {
+    action: 'delay',
+    value: 1000,
+  },
+  {
+    action: 'click',
+    element: `//*[@id="marketingChannelId-${bookingForm.marketingChannelId}"]`
+  },
+  // 予約者
+  {
+    action: 'click',
+    element: `//*[@id="createBookingFormPage-form-isReserverTheRepresentative"]`
+  },
+  // next
+  {
+    action: 'click',
+    element: `//*[@id="createBooking-btn-submit"]`
+  },
+  {
+    action: 'delay',
+    value: 2000,
+  },
+  {
+    action: 'click',
+    element: `//*[@id="booking-confirm-btn-submit"]`
+  },
+  {
+    action: 'delay',
+    value: 2000,
   },
 ]
 
-const basicInfo = [
-  {
-    action: 'type',
-    element: '//*[@id="createBookingFormPage-form-representativeGuest.birthday"]'
-  }
-]
 
 
 const createBooking = gotoPage.concat(representativeGuest);
