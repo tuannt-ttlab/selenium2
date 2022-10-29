@@ -30,4 +30,5 @@ yarn start headless=false cases=createTmpBookingFromSchedule,createRoom,createRo
 
 ```
 
-https://fakerjs.dev/api/
+<https://fakerjs.dev/api/>
+test
