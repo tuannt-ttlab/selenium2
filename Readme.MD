@@ -7,7 +7,8 @@ yarn install
 ## mac platform
 
 ```
-brew install --cask chromium & which chromium
+brew install --cask chromium
+brew install --cask chromium --no-quarantine
 ```
 
 #### change executablePath: "/opt/homebrew/bin/chromium"
